@@ -1,0 +1,107 @@
+@import "styles/variables.scss";
+
+.container {
+  max-width: 443px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.goBack {
+  position: absolute;
+  top: 23px;
+  left: 54px;
+  padding-left: 30px;
+  background: url(../../assets/ArrowBack.svg) 0 no-repeat;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  
+  @media (max-width: $mediaWidthMobile) {
+    top: 25px;
+    left: 28px;
+  }
+}
+
+.profileBody {
+  padding-top: 71px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @media (max-width: $mediaWidthIPadMini) {
+    padding-top: 90px;
+  }
+  @media (max-width: $mediaWidthMobile) {
+    padding-top: 119px;
+  }
+
+  & img {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid #f2f2f7;
+    margin-bottom: 11px;
+
+    @media (max-width: $mediaWidthIPadMini) {
+      height: 250px;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mediaWidthMobile) {
+      height: 150px;
+      width: 150px;
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.profileName {
+  margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+
+  @media (max-width: $mediaWidthMobile) {
+    margin-bottom: 35px;
+    font-size: 32px;
+    line-height: 37.5px;
+  }
+}
+
+.profileInfoTitle {
+  font-size: 20px;
+  line-height: 24px;
+  color: #8e8e93;
+  margin-bottom: 48px;
+
+  @media (max-width: $mediaWidthMobile) {
+    text-align: start;
+    margin-bottom: 16px;
+  }
+}
+
+.profileInfoBody {
+  border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+  text-align: start;
+  padding: 9px 0;
+
+  @media (max-width: $mediaWidthMobile) {
+    margin-left: 16px;
+  }
+
+  & h4 {
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: #6e798c;
+    text-transform: capitalize;
+  }
+}
