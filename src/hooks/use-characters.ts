@@ -16,7 +16,6 @@ export const useCharacters = () => {
       setDebounceText(text);
     }, 200), []);
 
-  console.log(debounceText);
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character?name=${debounceText}`)
       .then(response => response.json())

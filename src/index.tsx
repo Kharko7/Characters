@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import ReactDOM from 'react-dom/client';
 import './styles/index.scss';
@@ -9,6 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    <App />
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID as string}>
+      <App />
+    </GoogleOAuthProvider>
   </BrowserRouter>
 );
