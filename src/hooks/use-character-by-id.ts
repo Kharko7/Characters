@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { Character } from "interface/Character";
 
-export const useCharacterById = (id: string | undefined) => {
+export const useCharacterById = (id: string) => {
   const [character, setCharacter] = useState<Character | null>(null);
 
   useEffect(() => {

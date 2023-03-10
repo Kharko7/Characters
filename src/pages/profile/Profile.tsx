@@ -4,13 +4,14 @@ import styles from './Profile.module.scss';
 import { useCharacterById } from 'hooks/use-character-by-id';
 import { profileInfo } from 'constants/profileInfo';
 import TitleAndSubtitle from 'components/title-and-subtitle/TitleAndSubtitle';
+import GoogleLogInBtn from 'components/google-log-in-btn/GoogleLogInBtn';
 
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
 
-  const character = useCharacterById(params.id);
+  const character = useCharacterById(params.id || '');
   const from = location.state?.from?.pathname || '';
   const goBack = () => navigate(from);
 
@@ -54,6 +55,7 @@ const Profile = () => {
         <h3 className={styles.profileInfoTitle}>Informations</h3>
         {TitleAndSubtitleItems}
       </div>
+      <GoogleLogInBtn />
     </div>
   );
 };
